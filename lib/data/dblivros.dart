@@ -22,7 +22,7 @@ class DbLivros {
 
                   CREATE TABLE IF NOT EXISTS livro ( 
                         id primary key, 
-                        nome varchar(255) not null, 
+                        titulo varchar(255) not null, 
                         autor varchar(50) not null, 
                         genero varchar(25) not null, 
                         preco varchar(8) not null, 
