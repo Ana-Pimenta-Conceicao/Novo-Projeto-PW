@@ -25,7 +25,7 @@ class DbLivros {
                         titulo varchar(255) not null, 
                         autor varchar(50) not null, 
                         genero varchar(25) not null, 
-                        preco numeric(10,8) not null, 
+                        preco varchar(25) not null, 
                         roll_no int not null
                     ); 
 
@@ -38,7 +38,7 @@ class DbLivros {
 
   //método de consulta de dados
 
-  Future<Map<dynamic, dynamic>?> geLivro(int rollno) async {
+  Future<Map<dynamic, dynamic>?> getLivro(int rollno) async {
     List<Map> maps =
         await db.query('livro', where: 'roll_no = ?', whereArgs: [rollno]);
 

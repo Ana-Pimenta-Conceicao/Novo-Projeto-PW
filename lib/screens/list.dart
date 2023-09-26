@@ -53,15 +53,15 @@ class _ListLivro extends State<ListLivro> {
                         subtitle: Text("Codigo:" +
                             stuone["roll_no"].toString() +
                             ", Preço: " +
-                            stuone["preco"].toString()),
+                            stuone["preco"]),
                         trailing: Wrap(
                           children: [
                             IconButton(
                                 onPressed: () {
-                              //    Navigator.push(context, MaterialPageRoute(
-                                 //     builder: (BuildContext context) {
-                              //      return EditBook(rollno: stuone["roll_no"]);
-                            //      })); //navigate to edit page, pass student roll no to edit
+                                 Navigator.push(context, MaterialPageRoute(
+                                     builder: (BuildContext context) {
+                                 return EditLivro(rollno: stuone["roll_no"]);
+                                 })); //navigate to edit page, pass student roll no to edit
                                 },
                                 icon: Icon(Icons.edit)),
                             IconButton(
